@@ -12,6 +12,8 @@
     <script src="https://unpkg.com/aframe-randomizer-components@^3.0.1/dist/aframe-randomizer-components.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.5/dist/aframe-particle-system-component.min.js"></script>
     <script src="/js/spawn-in-circle.component.js"></script>
+    
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   </head>
   <body>
     <a-scene networked-scene="
@@ -81,6 +83,10 @@
 
       <a-sky src="#sky" rotation="0 -90 0"></a-sky>
       <a-entity id="particles" particle-system="preset: snow"></a-entity>
+      
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Freflectivity.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" ></a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2FBee.glb)" position="3 0.3 3" scale = "0.1 0.1 0.1" rotation = "0 0 0" ></a-entity>
+      
     </a-scene>
 
     <script>

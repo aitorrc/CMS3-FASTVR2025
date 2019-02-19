@@ -124,5 +124,28 @@
         ]
       });
     </script>
+    
+    <script>
+      AFRAME.registerComponent('foo', {
+        init: function() {
+
+          var box = document.querySelector('a-box')
+          var sphere = document.querySelector('a-sphere')
+
+          this.el.addEventListener('loaded', (e) => {
+            box.emit('first');
+          })
+
+          document.querySelector("#boxanimation").addEventListener('animationend', (e) => {
+            sphere.emit('second');
+          })
+          document.querySelector("#sphereanimation").addEventListener('animationend', (e) => {
+            box.emit('first');
+          })
+        }
+      })
+
+    </script>
+    
   </body>
 </html>

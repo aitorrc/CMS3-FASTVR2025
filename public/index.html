@@ -86,12 +86,12 @@
 
       <a-sky src="#sky" rotation="0 -90 0"></a-sky>
       <a-entity id="particles" particle-system="preset: snow"></a-entity>
-      https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicrostruct2.glb
+      
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicrostruct2.glb)" position="10 0.3 7" scale = "0.1 0.1 0.1" rotation = "90 0 0" ><!/a-entity>
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Freflectivity.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" ><!/a-entity>
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2FBee.glb)" position="3 0.3 3" scale = "0.1 0.1 0.1" rotation = "0 0 0" ><!/a-entity>
       
-      <a-entity id="m_0.25" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.25.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false"  >
+      <a-entity id="m_0.25" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.25.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "true"  >
       <a-animation id="vm1" attribute="visible" begin="first" dur="2000" to="true"></a-animation>
       <a-animation id="hm1" attribute="visible" begin="second" dur="12000" to="false"></a-animation></a-entity>
       <a-entity id="m_0.30" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.30.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
@@ -158,11 +158,12 @@
           })
 
           document.querySelector("#vm1").addEventListener('animationend', (e) => {
-            m1.emit('first');
+            m1.emit('second');
             m2.emit('second');
           })
           document.querySelector("#vm2").addEventListener('animationend', (e) => {
-            box.emit('first');
+            m2.emit('third');
+            m3.emit('third');
           })
         }
       })

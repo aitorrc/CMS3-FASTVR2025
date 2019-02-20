@@ -17,7 +17,7 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js"></script>
   </head>
   <body>
-    <a-scene networked-scene="
+    <a-scene foo cursor="rayOrigin:mouse" networked-scene="
       room: basic;
       debug: true;
     ">
@@ -91,28 +91,36 @@
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Freflectivity.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" ><!/a-entity>
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2FBee.glb)" position="3 0.3 3" scale = "0.1 0.1 0.1" rotation = "0 0 0" ><!/a-entity>
       
-      <a-entity id="m_0.25" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.25.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "true"  >
-      <a-animation id="vm1" attribute="visible" begin="first" dur="2000" to="true"></a-animation>
-      <a-animation id="hm1" attribute="visible" begin="second" dur="12000" to="false"></a-animation></a-entity>
-      <a-entity id="m_0.30" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.30.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
-      <a-animation id="vm2" attribute="visible" begin="second" dur="2000" to="true"></a-animation>
-      <a-animation id="hm2" attribute="visible" begin="third" dur="12000" to="false"></a-animation></a-entity>
-      <a-entity id="m_0.35" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.35.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
-      <a-animation id="vm3" attribute="visible" begin="third" dur="2000" to="true"></a-animation>
-      <a-animation id="hm3" attribute="visible" begin="fourth" dur="12000" to="false"></a-animation></a-entity>
-      <a-entity id="m_0.40" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.40.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
-      <a-animation id="vm4" attribute="visible" begin="fourth" dur="2000" to="true"></a-animation>
-      <a-animation id="hm4" attribute="visible" begin="fifth" dur="12000" to="false"></a-animation></a-entity>
-      <a-entity id="m_0.45" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.45.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
-      <a-animation id="vm5" attribute="visible" begin="fifth" dur="2000" to="true"></a-animation>
-      <a-animation id="hm5" attribute="visible" begin="sixth" dur="12000" to="false"></a-animation></a-entity>
-      <a-entity id="m_0.50" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.50.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
-      <a-animation id="vm6" attribute="visible" begin="sixth" dur="2000" to="true"></a-animation>
-      <a-animation id="hm6" attribute="visible" begin="seventh" dur="12000" to="false"></a-animation></a-entity>
-      <a-entity id="m_0.55" gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.55.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" visible = "false" >
-      <a-animation id="vm7" attribute="visible" begin="seventh" dur="2000" to="true"></a-animation>
-      <a-animation id="hm7" attribute="visible" begin="first" dur="12000" to="false"></a-animation></a-entity>
-      
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.25.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m1">
+        <a-animation id="m1show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m1hide" attribute="visible" begin="hide" dur="12000" to="false"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.30.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m2" visible = "false">
+        <a-animation id="m2show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m2hide" attribute="visible" begin="hide" dur="12000" to="false"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.35.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m3" visible = "false">
+        <a-animation id="m3show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m3hide" attribute="visible" begin="hide" dur="12000" to="false"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.40.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m4" visible = "false">
+        <a-animation id="m4show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m4hide" attribute="visible" begin="hide" dur="12000" to="false"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.50.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m5" visible = "false">
+        <a-animation id="m5show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m5hide" attribute="visible" begin="hide" dur="12000" to="false"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.55.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m6" visible = "false">
+        <a-animation id="m6show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m6hide" attribute="visible" begin="hide" dur="12000" to="false"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicro_0.60.glb)" scale = "0.1 0.1 0.1" rotation = "90 0 0" position="0 0 -2" id = "m7" visible = "false">
+        <a-animation id="m7show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
+        <a-animation id="m7hide" attribute="visible" begin="hide" dur="1200" to="false"></a-animation>
+      </a-entity>
+
+
       
       
     </a-scene>
@@ -142,32 +150,51 @@
     </script>
     
     <script>
-      AFRAME.registerComponent({
+      AFRAME.registerComponent('foo', {
         init: function() {
 
-          var m1 = document.querySelector("#m_0.25")
-          var m2 = document.querySelector("#m_0.30")
-          var m3 = document.querySelector("#m_0.35")
-          var m4 = document.querySelector("#m_0.40")
-          var m5 = document.querySelector("#m_0.45")
-          var m6 = document.querySelector("#m_0.50")
-          var m7 = document.querySelector("#m_0.55")
-          
+          var m1 = document.querySelector("#m1")
+          var m2 = document.querySelector("#m2")
+          var m3 = document.querySelector("#m3")
+          var m4 = document.querySelector("#m4")
+          var m5 = document.querySelector("#m5")
+          var m6 = document.querySelector("#m6")
+          var m7 = document.querySelector("#m7")
+
           this.el.addEventListener('loaded', (e) => {
-            m1.emit('first');
+            m1.emit('show');
           })
 
-          document.querySelector("#vm1").addEventListener('animationend', (e) => {
-            m1.emit('second');
-            m2.emit('second');
+          document.querySelector("#m1show").addEventListener('animationend', (e) => {
+            m1.emit('hide');
+            m2.emit('show');
           })
-          document.querySelector("#vm2").addEventListener('animationend', (e) => {
-            m2.emit('third');
-            m3.emit('third');
+          document.querySelector("#m2show").addEventListener('animationend', (e) => {
+            m2.emit('hide');
+            m3.emit('show');
+          })
+          document.querySelector("#m3show").addEventListener('animationend', (e) => {
+            m3.emit('hide');
+            m4.emit('show');
+          })
+          document.querySelector("#m4show").addEventListener('animationend', (e) => {
+            m4.emit('hide');
+            m5.emit('show');
+          })
+          document.querySelector("#m5show").addEventListener('animationend', (e) => {
+            m5.emit('hide');
+            m6.emit('show');
+          })
+          document.querySelector("#m6show").addEventListener('animationend', (e) => {
+            m6.emit('hide');
+            m7.emit('show');
+          })
+          document.querySelector("#m7show").addEventListener('animationend', (e) => {
+            m7.emit('hide');
+            m1.emit('show');
           })
         }
       })
-
     </script>
     
   </body>

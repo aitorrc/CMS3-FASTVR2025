@@ -89,7 +89,7 @@
 
       <a-sky src="#sky" rotation="0 -90 0"></a-sky>
       <a-entity id="particles" particle-system="preset: snow"></a-entity>
-      
+      <!--
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Fmicrostruct2.glb)" position="10 0.3 7" scale = "0.1 0.1 0.1" rotation = "90 0 0" ><!/a-entity>
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2Freflectivity.glb)" position="0 0.3 0" scale = "0.1 0.1 0.1" rotation = "90 0 0" ><!/a-entity>
       <!a-entity gltf-model="url(https://cdn.glitch.com/6a3bf397-94dd-4106-9a94-ab75e7813dbb%2FBee.glb)" position="3 0.3 3" scale = "0.1 0.1 0.1" rotation = "0 0 0" ><!/a-entity>
@@ -122,7 +122,8 @@
         <a-animation id="m7show" attribute="visible" begin="show" dur="2000" to="true"></a-animation>
         <a-animation id="m7hide" attribute="visible" begin="hide" dur="1200" to="false"></a-animation>
       </a-entity>
-
+      -->
+      <a-scatterplot src="url(https://raw.githubusercontent.com/Michayal/AggieVR/master/WBdata.json)" x="Latitude" y="Height [m]" z="Longtitude" val="Temperature [C]"></a-scatterplot>
 
       
       

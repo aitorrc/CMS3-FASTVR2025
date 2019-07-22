@@ -124,68 +124,7 @@
       });
     </script>
     
-    <script>
-      AFRAME.registerComponent('foo', {
-        init: function() {
-
-          var m1 = document.querySelector("#m1")
-          var m2 = document.querySelector("#m2")
-          var m3 = document.querySelector("#m3")
-          var m4 = document.querySelector("#m4")
-          var m5 = document.querySelector("#m5")
-          var m6 = document.querySelector("#m6")
-          var m7 = document.querySelector("#m7")
-          var m8 = document.querySelector("#m8")
-          var m9 = document.querySelector("#m9")
-          var m10 = document.querySelector("#m10")
-
-          this.el.addEventListener('loaded', (e) => {
-            m1.emit('show');
-          })
-
-          document.querySelector("#m1show").addEventListener('animationend', (e) => {
-            m1.emit('hide');
-            m2.emit('show');
-          })
-          document.querySelector("#m2show").addEventListener('animationend', (e) => {
-            m2.emit('hide');
-            m3.emit('show');
-          })
-          document.querySelector("#m3show").addEventListener('animationend', (e) => {
-            m3.emit('hide');
-            m4.emit('show');
-          })
-          document.querySelector("#m4show").addEventListener('animationend', (e) => {
-            m4.emit('hide');
-            m5.emit('show');
-          })
-          document.querySelector("#m5show").addEventListener('animationend', (e) => {
-            m5.emit('hide');
-            m6.emit('show');
-          })
-          document.querySelector("#m6show").addEventListener('animationend', (e) => {
-            m6.emit('hide');
-            m7.emit('show');
-          })
-          document.querySelector("#m7show").addEventListener('animationend', (e) => {
-            m7.emit('hide');
-            m8.emit('show');
-          })
-          document.querySelector("#m8show").addEventListener('animationend', (e) => {
-            m8.emit('hide');
-            m9.emit('show');
-          })
-          document.querySelector("#m9show").addEventListener('animationend', (e) => {
-            m9.emit('hide');
-            m10.emit('show');
-          })
-          document.querySelector("#m10show").addEventListener('animationend', (e) => {
-            m10.emit('hide');
-            m1.emit('show');
-          })
-        }
-      })
-    </script>
+    
     
   </body>
 </html>

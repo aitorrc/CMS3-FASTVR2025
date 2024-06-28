@@ -87,13 +87,12 @@
           spawn-in-circle="radius:3"
            wasd-controls="acceleration: 25;fly: true; verticalFlySpeed: 0.1;"
           look-controls
-          look-at="[gltf-model]"
         >
           <a-sphere class="head" visible="false" random-color></a-sphere>
         </a-entity>
       </a-entity>
       
-      <a-entity gltf-model="url(https://cdn.glitch.me/6bf97b21-90f3-4cf2-82b7-a616ccd9aebd/RVE_porosity_T15.glb?v=1719602951587)" position="20 0.3 20" scale = "5.2 5.2 5.2" rotation = "90 0 0" ></a-entity>
+      <a-entity id="targetEntity" gltf-model="url(https://cdn.glitch.me/6bf97b21-90f3-4cf2-82b7-a616ccd9aebd/RVE_porosity_T15.glb?v=1719602951587)" position="-10 0.0 10" scale = "5.2 5.2 5.2" rotation = "90 0 0" ></a-entity>
       
       <a-entity gltf-model="url(https://cdn.glitch.global/6bf97b21-90f3-4cf2-82b7-a616ccd9aebd/RVE_porosity_T15UY.glb?v=1719605627784)" position="10 0.3 20" scale = "5.2 5.2 5.2" rotation = "90 0 0" ></a-entity>
 
@@ -102,6 +101,30 @@
     </a-scene>
 
     <script>
+           // Wait for A-Frame to be initialized
+      document.addEventListener('DOMContentLoaded', function () {
+        // Find the camera entity
+        var cameraEntity = document.querySelector('#player');
+        // Find the target entity to look at
+        var targetEntity = document.querySelector('#targetEntity');
+
+        // Function to update the camera's look-at target
+        function updateLookAtTarget() {
+          // Get the position of the target entity
+          var targetPosition = targetEntity.getAttribute('position');
+          // Set the camera to look at the target entity's position
+          cameraEntity.setAttribute('rotation', {
+            x: 10,
+            y: 0,
+            z: 0
+          });
+        }
+
+        // Call the updateLookAtTarget function initially
+        updateLookAtTarget();
+      
+      
+      
       // Define custom schema for syncing avatar color, set by random-color
       // NAF.schemas.add({
       //   template: '#avatar-template',

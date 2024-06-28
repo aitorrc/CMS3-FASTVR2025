@@ -101,28 +101,7 @@
     </a-scene>
 
     <script>
-           // Wait for A-Frame to be initialized
-      document.addEventListener('DOMContentLoaded', function () {
-        // Find the camera entity
-        var cameraEntity = document.querySelector('#player');
-        // Find the target entity to look at
-        var targetEntity = document.querySelector('#targetEntity');
 
-        // Function to update the camera's look-at target
-        function updateLookAtTarget() {
-          // Get the position of the target entity
-          var targetPosition = targetEntity.getAttribute('position');
-          // Set the camera to look at the target entity's position
-          cameraEntity.setAttribute('rotation', {
-            x: 10,
-            y: 0,
-            z: 0
-          });
-        }
-
-        // Call the updateLookAtTarget function initially
-        updateLookAtTarget();
-      
       
       
       // Define custom schema for syncing avatar color, set by random-color

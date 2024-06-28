@@ -1,25 +1,12 @@
 {
-  "name": "naf-examples",
-  "version": "0.12.2",
-  "description": "Examples of networked-aframe",
-  "main": "./server.js",
+  "name": "naf-tutorial",
+  "version": "1.0.0",
+  "description": "My first multi-user virtual reality",
   "scripts": {
-    "prepare": "cp -r dist examples",
     "start": "node ./server.js"
   },
+  "author": "YOUR_NAME",
   "dependencies": {
     "networked-aframe": "^0.12.3"
-  },
-  "engines": {
-    "node": ">=16"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/naf-examples"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  }
 }

@@ -1,24 +1,20 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "networked-aframe-glitch",
-  "version": "0.0.1",
-  "description": "What am I about?",
-  "main": "server.js",
+  "name": "naf-examples",
+  "version": "0.12.2",
+  "description": "Examples of networked-aframe",
+  "main": "./server.js",
   "scripts": {
-    "start": "node server.js"
+    "prepare": "cp -r dist examples",
+    "start": "node ./server.js"
   },
   "dependencies": {
-    "networked-aframe": "^0.6.0",
-    "d3": "^5.9.1",
-    "aframe-scatterplot": "^1.0.3"
+    "networked-aframe": "^0.12.3"
   },
   "engines": {
-    "node": "6.9.x"
+    "node": ">=16"
   },
   "repository": {
-    "url": "https://glitch.com/#!/project/networked-aframe"
+    "url": "https://glitch.com/edit/#!/naf-examples"
   },
   "license": "MIT",
   "keywords": [

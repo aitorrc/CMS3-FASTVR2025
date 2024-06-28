@@ -69,17 +69,16 @@
         <!-- /Templates -->
       </a-assets>
       
-            <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
-      <a-entity light="color: #ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
-
-      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+     
       
        <!-- /Models to be uploaded -->
       <a-entity gltf-model="url(https://cdn.glitch.global/6bf97b21-90f3-4cf2-82b7-a616ccd9aebd/RVE_porosity_T15UY.glb?v=1719605627784)" position="0 0.3 20" scale = "15.2 15.2 15.2" rotation = "90 0 0" ></a-entity>
     <a-entity gltf-model="url(https://cdn.glitch.me/6bf97b21-90f3-4cf2-82b7-a616ccd9aebd/RVE_porosity_T15.glb?v=1719602951587)" position="20 0.3 20" scale = "15.2 15.2 15.2" rotation = "90 0 0" ></a-entity>
     <a-entity environment="preset: default; groundColor: #000022; skyColor: #110000;"></a-entity>
 
-      <a-entity light="type:ambient;intensity:4.5"></a-entity>
+      <!--<a-entity light="type:ambient;intensity:0.1"></a-entity> -->
+       <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+      <a-entity light="color: #ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
 
       <!--   Here we declare only the local user's avatar, which we then broadcast to other users     -->
       <!--   The 'spawn-in-circle' component will set the position and rotation of #rig;
@@ -102,7 +101,7 @@
           position="0 1.6 0"
           look-controls
           networked="template:#avatar-template;"
-          visible="false"
+          visible="true"
         >
         </a-entity>
       </a-entity>

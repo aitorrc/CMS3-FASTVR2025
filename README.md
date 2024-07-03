@@ -1,8 +1,9 @@
-# CMS3 FAST
+# CMS3-FAST: VR example
 
 Built with [Networked-A-Frame](https://github.com/haydenjameslee/networked-aframe), a web framework for building multi-user virtual reality experiences. Works on Vive, Rift, desktop, mobile platforms.
 
-Click and drag on desktop. Open it on a smartphone and use the device motion sensors.
+Click and drag to explore on a desktop. Open on a smartphone to use the device's motion sensors.
 
-A way to view Microstruvtures from .VTK files in  WebVR
-Built by: Aitor Cruzado
+This is a way to view Computational Materials Science simulations in WebVR.
+
+Example developed by: Dr. Aitor Cruzado
